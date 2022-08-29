@@ -17,6 +17,7 @@
 		214C035428BB5D3700270EA1 /* TimeCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C035328BB5D3700270EA1 /* TimeCalculatorUITests.swift */; };
 		214C035628BB5D3700270EA1 /* TimeCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C035528BB5D3700270EA1 /* TimeCalculatorUITestsLaunchTests.swift */; };
 		214C036628BB61AA00270EA1 /* ModelTimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C036528BB61AA00270EA1 /* ModelTimeCalculator.swift */; };
+		2199C11028BD608000473978 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2199C10F28BD608000473978 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		214C035328BB5D3700270EA1 /* TimeCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculatorUITests.swift; sourceTree = "<group>"; };
 		214C035528BB5D3700270EA1 /* TimeCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		214C036528BB61AA00270EA1 /* ModelTimeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTimeCalculator.swift; sourceTree = "<group>"; };
+		2199C10F28BD608000473978 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		214C032628BB5D3500270EA1 = {
 			isa = PBXGroup;
 			children = (
+				2199C10F28BD608000473978 /* .gitignore */,
 				214C033128BB5D3500270EA1 /* TimeCalculator */,
 				214C034828BB5D3700270EA1 /* TimeCalculatorTests */,
 				214C035228BB5D3700270EA1 /* TimeCalculatorUITests */,
@@ -258,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2199C11028BD608000473978 /* .gitignore in Resources */,
 				214C033F28BB5D3700270EA1 /* LaunchScreen.storyboard in Resources */,
 				214C033C28BB5D3700270EA1 /* Assets.xcassets in Resources */,
 				214C033A28BB5D3500270EA1 /* Main.storyboard in Resources */,
