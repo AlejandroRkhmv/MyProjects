@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		214C033328BB5D3500270EA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C033228BB5D3500270EA1 /* AppDelegate.swift */; };
+		214C033528BB5D3500270EA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C033428BB5D3500270EA1 /* SceneDelegate.swift */; };
+		214C033728BB5D3500270EA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C033628BB5D3500270EA1 /* ViewController.swift */; };
+		214C033A28BB5D3500270EA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214C033828BB5D3500270EA1 /* Main.storyboard */; };
+		214C033C28BB5D3700270EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214C033B28BB5D3700270EA1 /* Assets.xcassets */; };
+		214C033F28BB5D3700270EA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214C033D28BB5D3700270EA1 /* LaunchScreen.storyboard */; };
+		214C034A28BB5D3700270EA1 /* TimeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C034928BB5D3700270EA1 /* TimeCalculatorTests.swift */; };
+		214C035428BB5D3700270EA1 /* TimeCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C035328BB5D3700270EA1 /* TimeCalculatorUITests.swift */; };
+		214C035628BB5D3700270EA1 /* TimeCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C035528BB5D3700270EA1 /* TimeCalculatorUITestsLaunchTests.swift */; };
+		214C036628BB61AA00270EA1 /* ModelTimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C036528BB61AA00270EA1 /* ModelTimeCalculator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		214C034628BB5D3700270EA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 214C032728BB5D3500270EA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 214C032E28BB5D3500270EA1;
+			remoteInfo = TimeCalculator;
+		};
+		214C035028BB5D3700270EA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 214C032728BB5D3500270EA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 214C032E28BB5D3500270EA1;
+			remoteInfo = TimeCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		214C032F28BB5D3500270EA1 /* TimeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		214C033228BB5D3500270EA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		214C033428BB5D3500270EA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		214C033628BB5D3500270EA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		214C033928BB5D3500270EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		214C033B28BB5D3700270EA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		214C033E28BB5D3700270EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		214C034028BB5D3700270EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		214C034528BB5D3700270EA1 /* TimeCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		214C034928BB5D3700270EA1 /* TimeCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculatorTests.swift; sourceTree = "<group>"; };
+		214C034F28BB5D3700270EA1 /* TimeCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		214C035328BB5D3700270EA1 /* TimeCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculatorUITests.swift; sourceTree = "<group>"; };
+		214C035528BB5D3700270EA1 /* TimeCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		214C036528BB61AA00270EA1 /* ModelTimeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTimeCalculator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		214C032C28BB5D3500270EA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		214C034228BB5D3700270EA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		214C034C28BB5D3700270EA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		214C032628BB5D3500270EA1 = {
+			isa = PBXGroup;
+			children = (
+				214C033128BB5D3500270EA1 /* TimeCalculator */,
+				214C034828BB5D3700270EA1 /* TimeCalculatorTests */,
+				214C035228BB5D3700270EA1 /* TimeCalculatorUITests */,
+				214C033028BB5D3500270EA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		214C033028BB5D3500270EA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				214C032F28BB5D3500270EA1 /* TimeCalculator.app */,
+				214C034528BB5D3700270EA1 /* TimeCalculatorTests.xctest */,
+				214C034F28BB5D3700270EA1 /* TimeCalculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		214C033128BB5D3500270EA1 /* TimeCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				214C036428BB618800270EA1 /* model */,
+				214C036328BB617B00270EA1 /* controller */,
+				214C036228BB615F00270EA1 /* view */,
+				214C033228BB5D3500270EA1 /* AppDelegate.swift */,
+				214C033428BB5D3500270EA1 /* SceneDelegate.swift */,
+				214C033628BB5D3500270EA1 /* ViewController.swift */,
+				214C033B28BB5D3700270EA1 /* Assets.xcassets */,
+				214C034028BB5D3700270EA1 /* Info.plist */,
+			);
+			path = TimeCalculator;
+			sourceTree = "<group>";
+		};
+		214C034828BB5D3700270EA1 /* TimeCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				214C034928BB5D3700270EA1 /* TimeCalculatorTests.swift */,
+			);
+			path = TimeCalculatorTests;
+			sourceTree = "<group>";
+		};
+		214C035228BB5D3700270EA1 /* TimeCalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				214C035328BB5D3700270EA1 /* TimeCalculatorUITests.swift */,
+				214C035528BB5D3700270EA1 /* TimeCalculatorUITestsLaunchTests.swift */,
+			);
+			path = TimeCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		214C036228BB615F00270EA1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				214C033D28BB5D3700270EA1 /* LaunchScreen.storyboard */,
+				214C033828BB5D3500270EA1 /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		214C036328BB617B00270EA1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		214C036428BB618800270EA1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				214C036528BB61AA00270EA1 /* ModelTimeCalculator.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		214C032E28BB5D3500270EA1 /* TimeCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 214C035928BB5D3700270EA1 /* Build configuration list for PBXNativeTarget "TimeCalculator" */;
+			buildPhases = (
+				214C032B28BB5D3500270EA1 /* Sources */,
+				214C032C28BB5D3500270EA1 /* Frameworks */,
+				214C032D28BB5D3500270EA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeCalculator;
+			productName = TimeCalculator;
+			productReference = 214C032F28BB5D3500270EA1 /* TimeCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		214C034428BB5D3700270EA1 /* TimeCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 214C035C28BB5D3700270EA1 /* Build configuration list for PBXNativeTarget "TimeCalculatorTests" */;
+			buildPhases = (
+				214C034128BB5D3700270EA1 /* Sources */,
+				214C034228BB5D3700270EA1 /* Frameworks */,
+				214C034328BB5D3700270EA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				214C034728BB5D3700270EA1 /* PBXTargetDependency */,
+			);
+			name = TimeCalculatorTests;
+			productName = TimeCalculatorTests;
+			productReference = 214C034528BB5D3700270EA1 /* TimeCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		214C034E28BB5D3700270EA1 /* TimeCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 214C035F28BB5D3700270EA1 /* Build configuration list for PBXNativeTarget "TimeCalculatorUITests" */;
+			buildPhases = (
+				214C034B28BB5D3700270EA1 /* Sources */,
+				214C034C28BB5D3700270EA1 /* Frameworks */,
+				214C034D28BB5D3700270EA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				214C035128BB5D3700270EA1 /* PBXTargetDependency */,
+			);
+			name = TimeCalculatorUITests;
+			productName = TimeCalculatorUITests;
+			productReference = 214C034F28BB5D3700270EA1 /* TimeCalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		214C032728BB5D3500270EA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					214C032E28BB5D3500270EA1 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					214C034428BB5D3700270EA1 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 214C032E28BB5D3500270EA1;
+					};
+					214C034E28BB5D3700270EA1 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 214C032E28BB5D3500270EA1;
+					};
+				};
+			};
+			buildConfigurationList = 214C032A28BB5D3500270EA1 /* Build configuration list for PBXProject "TimeCalculator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 214C032628BB5D3500270EA1;
+			productRefGroup = 214C033028BB5D3500270EA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				214C032E28BB5D3500270EA1 /* TimeCalculator */,
+				214C034428BB5D3700270EA1 /* TimeCalculatorTests */,
+				214C034E28BB5D3700270EA1 /* TimeCalculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		214C032D28BB5D3500270EA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				214C033F28BB5D3700270EA1 /* LaunchScreen.storyboard in Resources */,
+				214C033C28BB5D3700270EA1 /* Assets.xcassets in Resources */,
+				214C033A28BB5D3500270EA1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		214C034328BB5D3700270EA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		214C034D28BB5D3700270EA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		214C032B28BB5D3500270EA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				214C033728BB5D3500270EA1 /* ViewController.swift in Sources */,
+				214C033328BB5D3500270EA1 /* AppDelegate.swift in Sources */,
+				214C036628BB61AA00270EA1 /* ModelTimeCalculator.swift in Sources */,
+				214C033528BB5D3500270EA1 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		214C034128BB5D3700270EA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				214C034A28BB5D3700270EA1 /* TimeCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		214C034B28BB5D3700270EA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				214C035428BB5D3700270EA1 /* TimeCalculatorUITests.swift in Sources */,
+				214C035628BB5D3700270EA1 /* TimeCalculatorUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		214C034728BB5D3700270EA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 214C032E28BB5D3500270EA1 /* TimeCalculator */;
+			targetProxy = 214C034628BB5D3700270EA1 /* PBXContainerItemProxy */;
+		};
+		214C035128BB5D3700270EA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 214C032E28BB5D3500270EA1 /* TimeCalculator */;
+			targetProxy = 214C035028BB5D3700270EA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		214C033828BB5D3500270EA1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				214C033928BB5D3500270EA1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		214C033D28BB5D3700270EA1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				214C033E28BB5D3700270EA1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		214C035728BB5D3700270EA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		214C035828BB5D3700270EA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		214C035A28BB5D3700270EA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KX8766VHZ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeCalculator/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.TimeCalculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		214C035B28BB5D3700270EA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KX8766VHZ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeCalculator/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.TimeCalculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		214C035D28BB5D3700270EA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KX8766VHZ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.TimeCalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeCalculator.app/TimeCalculator";
+			};
+			name = Debug;
+		};
+		214C035E28BB5D3700270EA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KX8766VHZ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.TimeCalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeCalculator.app/TimeCalculator";
+			};
+			name = Release;
+		};
+		214C036028BB5D3700270EA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KX8766VHZ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.TimeCalculatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TimeCalculator;
+			};
+			name = Debug;
+		};
+		214C036128BB5D3700270EA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KX8766VHZ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.TimeCalculatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TimeCalculator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		214C032A28BB5D3500270EA1 /* Build configuration list for PBXProject "TimeCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				214C035728BB5D3700270EA1 /* Debug */,
+				214C035828BB5D3700270EA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		214C035928BB5D3700270EA1 /* Build configuration list for PBXNativeTarget "TimeCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				214C035A28BB5D3700270EA1 /* Debug */,
+				214C035B28BB5D3700270EA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		214C035C28BB5D3700270EA1 /* Build configuration list for PBXNativeTarget "TimeCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				214C035D28BB5D3700270EA1 /* Debug */,
+				214C035E28BB5D3700270EA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		214C035F28BB5D3700270EA1 /* Build configuration list for PBXNativeTarget "TimeCalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				214C036028BB5D3700270EA1 /* Debug */,
+				214C036128BB5D3700270EA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 214C032728BB5D3500270EA1 /* Project object */;
+}
