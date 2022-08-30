@@ -12,6 +12,7 @@ class OperandsCalculation {
     
     var firstOperand = 0
     var secondOperand = 0
+    var secondOperandForMultiAndDivisionButtons = 0
     var binaryOperator = ""
     
     private func calculateOperands(hours: Int, minutes: Int, seconds: Int) -> Int {
@@ -44,15 +45,17 @@ class OperandsCalculation {
             currentResultInSeconds = firstOperand + secondOperand
         case "-":
             currentResultInSeconds = firstOperand - secondOperand
+        case "×":
+            currentResultInSeconds = firstOperand * secondOperandForMultiAndDivisionButtons
+        case "÷":
+            currentResultInSeconds = firstOperand / secondOperandForMultiAndDivisionButtons
         default: break
         }
         
         resultToresultLabel["h"] = currentResultInSeconds / 3600
         resultToresultLabel["m"] = (currentResultInSeconds % 3600) / 60
         resultToresultLabel["s"] = (currentResultInSeconds % 3600) % 60
-        
-        
-        
+    
         return resultToresultLabel
     }
 }
