@@ -117,6 +117,9 @@
                                         <rect key="frame" x="258" y="187.33333333333331" width="82" height="89.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="×"/>
+                                        <connections>
+                                            <action selector="multiAndDivisButtonsPresed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fb-7a-Wrn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXG-qA-RJV">
                                         <rect key="frame" x="88" y="279.66666666666663" width="82" height="89"/>
@@ -146,6 +149,9 @@
                                         <rect key="frame" x="258" y="279.66666666666663" width="82" height="89"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="÷"/>
+                                        <connections>
+                                            <action selector="multiAndDivisButtonsPresed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5jU-bU-6by"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RT0-82-fBh">
                                         <rect key="frame" x="88" y="371.66666666666663" width="82" height="89.333333333333314"/>
@@ -288,6 +294,9 @@
                     </view>
                     <connections>
                         <outlet property="resultLabel" destination="RyD-6w-AM3" id="Nsv-iL-i6c"/>
+                        <outletCollection property="hmsButtons" destination="EGT-iF-moJ" collectionClass="NSMutableArray" id="pfy-4d-y8n"/>
+                        <outletCollection property="hmsButtons" destination="LXO-m5-fJn" collectionClass="NSMutableArray" id="ltg-6g-JC1"/>
+                        <outletCollection property="hmsButtons" destination="8l2-Zc-GS3" collectionClass="NSMutableArray" id="Kbx-eO-ee4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

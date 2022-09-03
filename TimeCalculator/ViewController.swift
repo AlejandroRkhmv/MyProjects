@@ -11,11 +11,16 @@ class ViewController: UIViewController {
 
     let model = OperandsCalculation()
     
+    let maxLengthResultLabelText = 19
     let possibleNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var freeLabel = false
+    
     var hourButtonDidPressed = false
     var minuteButtonDidPressed = false
     var secondButtonDidPressed = false
+    
+    var plusMinusButton = false
+    var multiDivisionButton = false
     
     var hoursNumber = 0
     var minuteNumber = 0
@@ -23,29 +28,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     
-    
-    
-    
-    
-    
+    @IBOutlet var hmsButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
-    
-    
-    
     @IBAction func numberButtonPressed(_ sender: UIButton) {
         
         let number = sender.titleLabel?.text
         
-        if (resultLabel.text?.count)! < 19 {
+        if (resultLabel.text?.count)! < maxLengthResultLabelText {
             if freeLabel {
                 resultLabel.text! += number!
-                
             } else {
                 resultLabel.text = number
                 freeLabel = true
@@ -54,6 +50,7 @@ class ViewController: UIViewController {
     }
     
     func endIndexIsNumber() -> Bool {
+        
         let endIndexCharacter = resultLabel.text?.index(before: (resultLabel.text?.endIndex)!)
         let endCharacter = resultLabel.text![endIndexCharacter!]
         
@@ -61,9 +58,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func hourButtonPressed(_ sender: UIButton) {
+        
         let hourTitle = sender.titleLabel?.text
         
-        if (resultLabel.text?.count)! < 19 && endIndexIsNumber() {
+        if (resultLabel.text?.count)! < maxLengthResultLabelText && endIndexIsNumber() {
             if freeLabel && !hourButtonDidPressed && !minuteButtonDidPressed && !secondButtonDidPressed {
                 resultLabel.text! += hourTitle!
                 hourButtonDidPressed = true
@@ -74,7 +72,7 @@ class ViewController: UIViewController {
     @IBAction func minuteButtonPressed(_ sender: UIButton) {
         let minuteTitle = sender.titleLabel?.text
         
-        if (resultLabel.text?.count)! < 19 && endIndexIsNumber() {
+        if (resultLabel.text?.count)! < maxLengthResultLabelText && endIndexIsNumber() {
             if freeLabel && !minuteButtonDidPressed && !secondButtonDidPressed {
                 resultLabel.text! += minuteTitle!
                 minuteButtonDidPressed = true
@@ -86,7 +84,7 @@ class ViewController: UIViewController {
     @IBAction func secondButtonPressed(_ sender: UIButton) {
         let secondTitle = sender.titleLabel?.text
         
-        if (resultLabel.text?.count)! < 19 && endIndexIsNumber() {
+        if (resultLabel.text?.count)! < maxLengthResultLabelText && endIndexIsNumber() {
             if freeLabel && !secondButtonDidPressed {
                 resultLabel.text! += secondTitle!
                 secondButtonDidPressed = true
@@ -139,8 +137,14 @@ class ViewController: UIViewController {
         }
     }
     
+    func createSecondOperandForMultiAndDivisionButtons() {
+        
+        model.secondOperandForMultiAndDivisionButtons = Int(resultLabel.text!)!
+    }
+    
     @IBAction func twoOperandsButton(_ sender: UIButton) {
         
+        plusMinusButton = true
         model.binaryOperator = (sender.titleLabel?.text)!
         
         calculatedHoursMinutesAndSeconds()
@@ -150,7 +154,7 @@ class ViewController: UIViewController {
         print(secondNumber)
         
         model.setFirstOperand(hours: hoursNumber, minutes: minuteNumber, seconds: secondNumber)
-        
+        print(model.firstOperand)
         //let firstOperandTextForLabel = resultLabel.text!
         
         hoursNumber = 0
@@ -162,14 +166,14 @@ class ViewController: UIViewController {
         hourButtonDidPressed = false
         minuteButtonDidPressed = false
         secondButtonDidPressed = false
-        
-        
-        
-        print(model.firstOperand)
-        
     }
     
-    @IBAction func equalButton(_ sender: UIButton) {
+    @IBAction func multiAndDivisButtonsPresed(_ sender: UIButton) {
+        
+        makeHMSButtonsEnabled(isEnabled: false)
+        
+        multiDivisionButton = true
+        model.binaryOperator = (sender.titleLabel?.text)!
         
         calculatedHoursMinutesAndSeconds()
         
@@ -177,16 +181,51 @@ class ViewController: UIViewController {
         print(minuteNumber)
         print(secondNumber)
         
-        model.setSecondOperand(hours: hoursNumber, minutes: minuteNumber, seconds: secondNumber)
+        model.setFirstOperand(hours: hoursNumber, minutes: minuteNumber, seconds: secondNumber)
+        print(model.firstOperand)
         
-        print(model.secondOperand)
+        hoursNumber = 0
+        minuteNumber = 0
+        secondNumber = 0
+        resultLabel.text = "0"
+        freeLabel = false
+    }
+    
+    
+    @IBAction func equalButton(_ sender: UIButton) {
         
-        let result = model.calculateAnswer()
+        if plusMinusButton {
+            calculatedHoursMinutesAndSeconds()
+            
+            print(hoursNumber)
+            print(minuteNumber)
+            print(secondNumber)
+            
+            model.setSecondOperand(hours: hoursNumber, minutes: minuteNumber, seconds: secondNumber)
+            
+            print(model.secondOperand)
+            
+            let result = model.calculateAnswer()
+            
+            resultLabel.text = "\(result["h"]!)h\(result["m"]!)m\(result["s"]!)s"
+        } else {
+            model.secondOperandForMultiAndDivisionButtons = Int(resultLabel.text!)!
+            print(model.secondOperandForMultiAndDivisionButtons)
+            
+            let result = model.calculateAnswer()
+            
+            resultLabel.text = "\(result["h"]!)h\(result["m"]!)m\(result["s"]!)s"
+            
+            makeHMSButtonsEnabled(isEnabled: true)
+        }
         
-        resultLabel.text = "\(result["h"]!)h\(result["m"]!)m\(result["s"]!)s"
+        hourButtonDidPressed = false
+        minuteButtonDidPressed = false
+        secondButtonDidPressed = false
     }
     
     @IBAction func clearButtonPressed(_ sender: UIButton) {
+        
         hoursNumber = 0
         minuteNumber = 0
         secondNumber = 0
@@ -196,6 +235,8 @@ class ViewController: UIViewController {
         hourButtonDidPressed = false
         minuteButtonDidPressed = false
         secondButtonDidPressed = false
+        
+        makeHMSButtonsEnabled(isEnabled: true)
     }
     
     @IBAction func deleteLastSymbol(_ sender: UIButton) {
@@ -228,6 +269,13 @@ class ViewController: UIViewController {
             secondButtonDidPressed = false
         }
     }
+ 
     
+    private func makeHMSButtonsEnabled(isEnabled: Bool) {
+        for button in hmsButtons {
+            button.isEnabled = isEnabled
+        }
+    }
 }
+
 
