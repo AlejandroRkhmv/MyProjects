@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     let model = OperandsCalculation()
     
     let maxLengthResultLabelText = 19
+    let maxLengthResultLabelTextAfterMultiDivision = 4
     let possibleNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var freeLabel = false
     
@@ -26,6 +27,12 @@ class ViewController: UIViewController {
     var minuteNumber = 0
     var secondNumber = 0
     
+    @IBOutlet weak var firstOperandLabel: UILabel!
+    
+    @IBOutlet weak var symbolLabel: UILabel!
+    
+    @IBOutlet weak var secondOperandLabel: UILabel!
+    
     @IBOutlet weak var resultLabel: UILabel!
     
     @IBOutlet var hmsButtons: [UIButton]!
@@ -39,12 +46,23 @@ class ViewController: UIViewController {
         
         let number = sender.titleLabel?.text
         
-        if (resultLabel.text?.count)! < maxLengthResultLabelText {
-            if freeLabel {
-                resultLabel.text! += number!
-            } else {
-                resultLabel.text = number
-                freeLabel = true
+        if multiDivisionButton {
+            if (resultLabel.text?.count)! < maxLengthResultLabelTextAfterMultiDivision {
+                if freeLabel {
+                    resultLabel.text! += number!
+                } else {
+                    resultLabel.text = number
+                    freeLabel = true
+                }
+            }
+        } else {
+            if (resultLabel.text?.count)! < maxLengthResultLabelText {
+                if freeLabel {
+                    resultLabel.text! += number!
+                } else {
+                    resultLabel.text = number
+                    freeLabel = true
+                }
             }
         }
     }
@@ -155,11 +173,14 @@ class ViewController: UIViewController {
         
         model.setFirstOperand(hours: hoursNumber, minutes: minuteNumber, seconds: secondNumber)
         print(model.firstOperand)
-        //let firstOperandTextForLabel = resultLabel.text!
         
         hoursNumber = 0
         minuteNumber = 0
         secondNumber = 0
+        
+        firstOperandLabel.text = resultLabel.text
+        symbolLabel.text = model.binaryOperator
+        
         resultLabel.text = "00h00m00s"
         freeLabel = false
         
@@ -187,12 +208,18 @@ class ViewController: UIViewController {
         hoursNumber = 0
         minuteNumber = 0
         secondNumber = 0
+        
+        firstOperandLabel.text = resultLabel.text
+        symbolLabel.text = model.binaryOperator
+        
         resultLabel.text = "0"
         freeLabel = false
     }
     
     
     @IBAction func equalButton(_ sender: UIButton) {
+        
+        secondOperandLabel.text = resultLabel.text
         
         if plusMinusButton {
             calculatedHoursMinutesAndSeconds()
@@ -231,6 +258,10 @@ class ViewController: UIViewController {
         secondNumber = 0
         resultLabel.text = "00h00m00s"
         freeLabel = false
+        
+        firstOperandLabel.text = ""
+        symbolLabel.text = ""
+        secondOperandLabel.text = ""
         
         hourButtonDidPressed = false
         minuteButtonDidPressed = false
@@ -277,5 +308,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
-
